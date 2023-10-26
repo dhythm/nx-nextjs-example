@@ -9,14 +9,38 @@
       ]
     },
     "lint": {
-      "cache": true
+      "cache": true,
+      "inputs": [
+        "default",
+        "{workspaceRoot}/.eslintrc.json",
+        "{workspaceRoot}/.eslintignore",
+        "{workspaceRoot}/eslint.config.js"
+      ]
     },
     "test": {
-      "cache": true
+      "cache": true,
+      "inputs": [
+        "default",
+        "^default",
+        "{workspaceRoot}/jest.preset.js"
+      ]
     },
     "e2e": {
       "cache": true
     }
   },
-  "nxCloudAccessToken": "Mjk2ZWNjZjgtZDc4Mi00ZWFjLWJhMGMtMzMzNjU4OWFkYmU2fHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "Mjk2ZWNjZjgtZDc4Mi00ZWFjLWJhMGMtMzMzNjU4OWFkYmU2fHJlYWQtd3JpdGU=",
+  "generators": {
+    "@nx/react": {
+      "application": {
+        "babel": true
+      }
+    },
+    "@nx/next": {
+      "application": {
+        "style": "none",
+        "linter": "eslint"
+      }
+    }
+  }
 }
